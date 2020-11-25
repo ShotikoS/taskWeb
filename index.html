@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="geo">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta name="description" content="auto inport website. car delivery service from copart and aiia">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="auto import | avto importi | manqanis chamoyvana | ავტო იმპორტი | მანქანის ჩამოყვანა">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <link rel="stylesheet" href="./css/fonts.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <link href="./image/logo.png" rel="shortcut icon">
+    <script src="https://kit.fontawesome.com/4106aa3140.js" crossorigin="anonymous" SomeSite="Strict"></script>
+    <title>Task</title>
+</head>
+<body>
+    <header class="header__container flex">
+        <ul class="header__content flex" id="header__content"></ul>
+    </header>
+    <hr style="width: 100%; margin: 0;border: none; height: 1px; background-color: #f4f4f5;">
+    <nav class="navbar__container">
+        <i class="fas fa-bars bar"></i>
+        <a href="./index.html" class="logo"><img src="./image/logo.png" alt="WebsiteLogo"></a>
+        <ul class="navbar__menu flex" id="navbar__menu"></ul>
+        <div class="flex">
+            <div class="live flex">
+                <div class="round"></div>
+                <p class="liveText">Live</p>
+            </div>
+            <button class="tickets">ბილეთები</button>
+        </div>
+        <div class="languages__container">
+            <div class="currentLanguage flex"><p>ქარ</p> <i class="fas fa-chevron-down"></i></div>
+            <ul class="Languages">
+                <li>EN</li>
+                <li>ქარ</li>
+                <li>рус</li>
+            </ul>
+        </div>
+    </nav>
+    <section class="NewsSlider__container">
+        <div class="slider__content">
+            <button class="newsType__slider">ეროვნული ნაკრები</button>
+            <h2 class="newsTitle__slider">ხორვატია 2:1 საქართველო</h2>
+            <p class="newsText__slider">19 ნოემბერს, საქართველოს ეროვნული ნაკრები წლის ბოლოს 
+                შეხვედრაში ხორვატიას დაუპირისპირდა. პულას ალდო დროსინას სახელობის სტადიონზე
+                 გამართული ამხანაგური მატჩი ორმხრივი…
+            </p>
+            <div class="Dots__container">
+                <div class="FirstSlide dotStyle activeDot" id="0"></div>
+                <div class="SecondSlide dotStyle" id="1"></div>
+                <div class="ThirdSlide dotStyle" id="2"></div>
+                <div class="FourthSlide dotStyle" id="3"></div>
+            </div>
+        </div>
+        <div class="slideChooser__content">
+            <ul class="chooseSlide" id="chooseSlide"></ul>
+        </div>
+    </section>
+    <section class="LastNews__container">
+        <h2 class="LastNews__title">ბოლო სიახლეები</h2>
+        <hr class="titleBorder">
+        <ul class="latestNews__content" id="latestNews__content"></ul>
+        <div class="lastNews__dots flex">
+            <div class="dot1 DotStyle activeDot" id="10"></div>
+            <div class="dot2 DotStyle" id="11"></div>
+            <div class="dot3 DotStyle" id="12"></div>
+            <div class="dot4 DotStyle" id="13"></div>
+        </div>
+    </section>
+
+    <button class="SeeAllNews">ყველა სიახლე</button>
+
+    <script
+        src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+        crossorigin="anonymous">
+    </script>
+
+    <script src="./js/app.js"></script>
+</body>
+</html>

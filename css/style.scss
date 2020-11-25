@@ -1,0 +1,432 @@
+@import './mixins.scss';
+@import './variables.scss';
+
+::-webkit-scrollbar{
+    width: 6px;
+    height: 3px;
+}
+
+::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 3px gray;
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: #2196f3;
+    border-radius: 8px;
+    &:hover{
+        background: #1d74bb;
+    }
+}
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dotStyle{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #5A6661;
+}
+.activeDot{
+    background-color: white;
+}
+.Dots__container{
+    display: none;
+    width: 140px;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.header__container{
+    width: 100%;
+    height: 39px;
+    li{
+        padding: 0px 18px;
+        height: 39px;
+        display: flex;
+        align-items: center;
+        &:hover{
+            background-color: #ebebeb;
+        }
+        p{
+            font-family: NotoSansJP;
+        }
+    }
+    .active{
+        background-color: $borders;
+    }
+    a{
+        font-size: 12px;
+        color: black;
+        display: flex;
+        align-items: center;
+    }
+    .headerIcons{
+        width: 15px;
+        margin-right: 8px;
+    }
+}
+.navbar__container{
+    @include flexbox(center, space-between, row);
+    width: 90%;
+    margin: auto;
+    height: 94px;
+    .bar{
+        color: black;
+        font-size: 27px;
+        display: none;
+    }
+    .logo{
+        width: 69px;
+        height: 70px;
+    }
+    .navItem{
+        @include flexbox(center, center, column);
+        margin: 0px 20px;
+        font-size: 14px;
+    }
+    .dropDown{
+        position: absolute;
+        margin-top: 270px;
+        z-index: 1;
+        background-color: $borders;
+        width: 180px;
+        border-radius: 8px;
+        height: 220px;
+        @include flexbox(left, space-around, column);
+        display: none;
+        li{
+            padding-left: 30px;
+        }
+    }
+    .DropDowntitle{
+        cursor: pointer;
+        padding: 20px 0px;
+        &:hover{
+            color: red;
+            transform: scale(1.1);
+            transition: 0.5s;
+        }
+    }
+    .dropDown::before {
+        content: "";
+        position: absolute;
+        left: 80px;
+        top: -15px;
+        width: 0;
+        height: 0;
+        border-right: 10px solid transparent;
+        border-bottom: 15px solid $borders;
+        border-left: 10px solid transparent;
+    }
+    .dropDownItem{
+        border-left: 4px solid $borders;
+        padding: 8px 0px;
+    }
+    .dropDownItem:hover{
+        color: $buttonRed;
+        cursor: pointer;
+        border-left: 4px solid $buttonRed;
+    }
+    .round{
+        width: 7px;
+        height: 7px;
+        background-color: $buttonRed;
+        border-radius: 50%;
+        margin-right: 8px;
+    }
+    .liveText{
+        color: $buttonRed;
+        text-transform: uppercase;
+        cursor: default;
+        margin-right: 15px;
+        font-family: NotoSansJP !important;
+    }
+    .tickets{
+        background-color: $buttonRed;
+        height: 40px;
+        cursor: pointer;
+        width: 120px;
+        border: 1px $buttonRed solid;
+        border-radius: 20px;
+        color: white;
+        &:hover{
+            color: red;
+            background-color: white;
+            font-size: 16px;
+            transition: 0.5s;
+        }
+    }
+    .languages__container{
+        font-size: 14px;
+    }
+    .Languages li{
+        margin: 3px 0px;
+        font-size: 17px;
+        padding: 8px 41px;
+        &:hover{
+            background-color: gray;
+        }
+    }
+    .currentLanguage{
+        background-color: #F2F3F5;
+        padding: 10px 18px;
+        border-radius: 20px;
+        cursor: pointer;
+        p{
+            margin-right: 5px;
+        }
+    }
+    .Languages{
+        cursor: pointer;
+        position: absolute;
+        margin-top: 10px;
+        background-color: $borders;
+        padding: 18px 0px;
+        margin-left: -17px;
+        border-radius: 8px;
+        @include flexbox(center, space-around, column);
+        display: none;
+        z-index: 1;
+    }
+}
+#act{
+    display: block;
+}
+#act1{
+    background-color: $buttonRed;
+    color: white;
+    border: 1px solid $buttonRed;
+}
+.ball{
+    margin-right: 8px;
+}
+.NewsSlider__container{
+    width: 90%;
+    height: fit-content;
+    display: flex;
+    margin: auto;
+    border-radius: 8px;
+    margin-top: 10px;
+    .slider__content{
+        width: 67%;
+        height: 504px;
+        cursor: pointer;
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+        background-image: url('../image/Image.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        box-shadow: 0px -80px 80px 0px black inset;
+        padding-left: 30px;
+        display: flex;
+        padding-right: 10px;
+        flex-direction: column;
+        justify-content: flex-end;
+        color: white;
+        &:hover{
+            box-shadow: 0px -180px 80px 0px black inset;
+            transition: 0.5s;
+        }
+    }
+    .newsType__slider{
+        width: 165px;
+        height: 41px;
+        border: 1px solid $buttonRed;
+        background-color: $buttonRed;
+        border-radius: 50px;
+        color: white;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        p{
+            font-family: NotoSansJP;
+        }
+    }
+    .newsTitle__slider{
+        font-size: 25px;
+        margin: 20px 0px;
+    }
+    .newsText__slider{
+        font-size: 15px;
+        line-height: 20px;
+        margin-bottom: 30px;
+    }
+    .slideChooser__content{
+        width: 33%;
+        height: 504px;
+        background-color: #616971;
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+    }
+    .chooseSlide{
+        width: 95%;
+        margin: auto;
+        padding-left: 27px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        .line{
+            background-color: white;
+            width: 3px;
+            border-radius: 20px;
+            height: 95px;
+            margin-right: 6px;
+        }
+        .redLine{
+            width: 3px;
+            height: 48px;
+            position: absolute;
+            background-color: $buttonRed;
+            margin-top: -47px;
+            display: none;
+        }
+        .NewsChanger__button{
+            background-color: white;
+            border: 1px solid white;
+            cursor: pointer;
+            color: #375FC9;
+            width: 97px;
+            height: 31px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 30px;
+            margin-top: 10px;
+            p{
+                font-family: NotoSansJP;
+            }
+        }
+        .Newschanger__slideDescription{
+            height: fit-content;
+            width: 50%;
+            margin-left: 13px;
+            font-size: 12px;
+            line-height: 20px;
+            color: white;
+        }
+        li{
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            &:hover{
+                transform: scale(1.01);
+                transition: 0.5s;
+            }
+        }
+        .SlideList__image{
+            width: 120px;
+            height: 95px;
+            border-radius: 8px;
+            background-image: url('../image/Image.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+}
+
+.LastNews__container{
+    width: 90%;
+    margin: auto;
+    .LastNews__title{
+        margin-top: 50px;
+        font-size: 26px;
+        text-align: center;
+        color: #3C4A62;
+        padding-bottom: 7px;
+    }
+    .latestNews__title{
+        font-size: 16px;
+        color: #3C4A62;
+        font-weight: bold;
+        line-height: 22px;
+    }
+    .titleBorder{
+        width: 60px;
+        border: none;
+        height: 3px;
+        background-color: $buttonRed;
+    }
+    .latestNews__description{
+        width: 100%;
+        font-size: 13px !important;
+        width: 95%;
+        margin-top: 15px;
+        color: #606368;
+        line-height: 18px;
+    }
+    .latestNews__date{
+        margin: 12px 0px;
+        color: red;
+        font-size: 13px;
+    }
+    .LatestNews__type{
+        color: blue;
+        display: flex;
+        align-items: center;
+        p{
+            font-family: NotoSansJP;
+        }
+    }
+    .latestNews__content{
+        @include flexbox(unset, space-between, row);
+        margin-top: 30px;
+        li{
+            width: 24%;
+            cursor: pointer;
+            &:hover{
+                transition: 0.5s;
+                transform: scale(1.01);
+            }
+        }
+        .latestNews__img{
+            width: 100%;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            box-shadow: 0px -10px 0px 0px inset $buttonRed;
+            height: 196px;
+            background-image: url('../image/Image.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+}
+.lastNews__dots{
+    width: 100%;
+    margin-top: 30px;
+    display: none;
+    .DotStyle{
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: #5A6661;
+        margin: 0px 10px;
+    }
+    .activeDot{
+        background-color: rgb(0, 199, 0);
+    }
+}
+.SeeAllNews{
+    background-color: $buttonRed;
+    width: 165px;
+    height: 50px;
+    margin-top: 50px;
+    border: 1px solid $buttonRed;
+    border-radius: 50px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    font-size: 17px;
+    color: white;
+    margin-bottom: 30px;
+    &:hover{
+        box-shadow: 0px 0px 15px 5px $buttonRed;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+}
